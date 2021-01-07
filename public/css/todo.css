@@ -1,128 +1,146 @@
-/* Basic Style */
-body {
-    background: #fff;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-  }
-  .container {
-    display: block;
-    width: 400px;
-    margin: 100px auto 0;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  li * {
-    float: left;
-  }
-  li, h3 {
-    clear:both;
-    list-style:none;
-  }
-  input, button {
-    outline: none;
-    
-  }
-  button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    margin: 10px 0 0;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    float:right;
-  }
-  li button {
-      float:right
-  }
-  button:hover {
-    color: #333;
-  }
-  /* Heading */
-  h3,
-  label[for='newTask'] {
-    color: #333;
-    font-weight: 700;
-    font-size: 15px;
-    border-bottom: 2px solid #333;
-    padding: 30px 0 10px;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  input[type="text"] {
-    margin: 0;
-    font-size: 18px;
-    line-height: 18px;
-    height: 18px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 6px;
-    font-family: 'Roboto', sans-serif;
-    color: #888;
-  }
-  input[type="text"]:focus {
-    color: #333;
-  }
+body{
+  height:100%;
+  background: #FFEFBA;  /* fallback for old browsers */
+}
+
+h1{
+  text-transform: uppercase;
+  background: #86b7f8;
+  color:white;
+  margin: 0;
+  padding:10px 28px;
+  font-weight: 400;  
+  font-family: 'Roboto', sans-serif;
+
+}
+input{
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+  height:50px ;
+  font-size: 20px;
+  font-weight: 0.5px;
+  font-family: 'Roboto', sans-serif;
+  padding-left:25px;
+  border: 3px solid #D1D1D1;
+  color:#D1D1D1;
+}
+input:focus{
+  background: #F7F4F4;
+  border: 3px solid #86b7f8;
+  outline:none;
+  color: #86b7f8;
+}
+
+span{  
+  text-align:center;
+  height:50px;
+  width: 0;
+  opacity: 0;
+  -webkit-transition:0.25s;
+  transition: 0.25s linear;
+}
+#text{
+  font-family: 'Roboto', sans-serif;
+}
+i{
+  cursor: pointer;
+  margin-right:3px;
+}
+i:hover{
+  cursor: grab;
+}
+
+i.fas.fa-trash:hover{
+  color:red;
   
-  /* New Task */
-  label[for='newTask'] {
-    display: block;
-    margin: 0 0 20px;
+}
+i.fas.fa-edit:hover{
+  color:#6FD25A;
+}
+button{
+  background-color:#86b7f8;
+  outline:none;
+  border:none;
+  cursor:pointer;
+  display:inline-block;
+  position: absolute;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  border-radius:8px;
+  margin:0 auto;
+  box-shadow:0 4px #7E9EF7;
+}
+button:hover {
+  color: black;
+  box-shadow:0 2px #7E9EF7;
+  top:2px;
+  outline:none;
+}
+button:active{
+  box-shadow:none;
+  top:4px;
+  outline:none;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#buttons{
+  display:inline-block;
+  text-align:center;
+  position:absolute;
+  bottom:5px;
+  right:240px;
+  margin:0 auto;
+}
+#todo{
+  margin: 0 auto ;
+  box-shadow: 0 0 1em black;
+  max-width: 400px;
+  height:100%;
+  background:white;
+  position:relative;
+}
+
+.todos{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.todos li{
+  background: #F7F4F4;
+  height:50px;
+  line-height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.todos li:nth-child(2n){
+  background:#edf1f5;
+}
+.todos li:hover span{
+  width: 50px;
+  opacity: 1.0;
+  margin-left: 5px;
+}
+.display{
+  display:none;
+  transition: 0.3s linear;
+}
+.checked{
+  color:gray;
+  text-decoration:line-through;
+}
+
+/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
+@media screen and (max-height: 450px) {
+  #todo{
+      width:100%;
+      height:100%;
   }
-  input#new-task {
-    float: left;
-    width: 318px;
-  }
-  p > button:hover {
-    color: #0FC57C;
-  }
-  
-  /* Task list */
-  li {
-    overflow: hidden;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-  }
-  li > input[type="checkbox"] {
-    margin: 0 10px;
-    position: relative;
-    top: 15px;
-  }
-  li > label {
-    font-size: 18px;
-    line-height: 40px;
-    width: 237px;
-    padding: 0 0 0 11px;
-  }
-  li >  input[type="text"] {
-    width: 226px;
-  }
-  li > .delete:hover {
-    color: #CF2323;
-  }
-  
-  /* Completed */
-  #completed-tasks label {
-    text-decoration: line-through;
-    color: #888;
-  }
-  
-  /* Edit Task */
-  ul li input[type=text] {
-    display:none;
-  }
-  
-  ul li.editMode input[type=text] {
-    display:block;
-  }
-  
-  ul li.editMode label {
-    display:none;
-  }
-  li > .edit:hover {
-      color:blue;
-  }
+}

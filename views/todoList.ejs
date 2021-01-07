@@ -10,23 +10,21 @@
     <link rel="stylesheet" href="/css/todo.css">
 </head>
 <body>
-    <div class="container">
-        <p>
-          <label for="newTask">New Task</label><input id="newTask" type="text"><button><i class="fas fa-plus"></i></button>
-        </p>
+  <div id= "todo">
+    <h1> Simple Todo List </h1>
+
+    <input type= "text" placeholder="Add New Todo">
+
+    <ul class= "todos">
         
-        <h3>Todo List</h3>
-        <ul id="incompleteTasks">
-          <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit"><i class="fas fa-edit"></i></button><button class="delete"> <i class="fas fa-trash"></i></button></li>
-          <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Happy Stuff"><button class="edit"> <i class="fas fa-edit"></i></button> <button class="delete"> <i class="fas fa-trash"></i></button></li>
-        </ul>
-        
-        <h3>Completed</h3>
-        <ul id="completedTasks">
-          <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit"> <i class="fas fa-edit"></i></button><button class="delete"> <i class="fas fa-trash"></i></button></li>
-        </ul>
-      </div>
-  
+        <li id="text"><span><i class="fas fa-trash"></i>  <i class="fas fa-edit"></i> </span>Make this app</li>
+    </ul>
+
+    <div id= "buttons">
+        <button class="save">Save</button>
+    </div>
+</div>
+
 
 <script src="js/todoLogic.js"></script>
 </body>
