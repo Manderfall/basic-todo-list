@@ -26,6 +26,9 @@ const port = process.env.PORT || 3000;
 
 // Routes //
 
+const indexRoutes = require("./routes/index");
+
+app.use(indexRoutes)
 
 // START/LISTEN//		
 app.listen(port, () => { console.log(`Listening on port ${port}`); });
