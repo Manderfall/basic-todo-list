@@ -2,7 +2,6 @@ body{
   height:100%;
   background: #FFEFBA;  /* fallback for old browsers */
 }
-
 h1{
   text-transform: uppercase;
   background: #86b7f8;
@@ -15,8 +14,7 @@ h1{
 }
 input{
   background: white;
-  width: 100%;
-  box-sizing: border-box;
+  width:90%;
   height:50px ;
   font-size: 20px;
   font-weight: 0.5px;
@@ -40,6 +38,22 @@ span{
   -webkit-transition:0.25s;
   transition: 0.25s linear;
 }
+button{
+  display:inline-flex;
+  width: 9%;
+  outline:none;
+  border:none;
+  background: none;
+  color:none;
+  justify-content: flex-end;
+  align-items: center;
+  height:45px;
+}
+button:active{
+  border:none;
+  outline:none;
+}
+
 #text{
   font-family: 'Roboto', sans-serif;
 }
@@ -49,8 +63,9 @@ i{
   cursor: pointer;
   margin-right:3px;
 }
-i:hover{
-  cursor: grab;
+
+i.add{
+  color:green;
 }
 
 i.fas.fa-trash:hover{
@@ -60,7 +75,6 @@ i.fas.fa-trash:hover{
 i.fas.fa-edit:hover{
   color:#6FD25A;
 }
-
 
 #todo{
   margin: 0 auto ;
